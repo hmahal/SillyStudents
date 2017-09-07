@@ -6,6 +6,9 @@
 
 class Student
 {
+    /*
+     * Constructor for the Student class
+     */
     function __construct()
     {
         $this->surname = '';
@@ -14,16 +17,25 @@ class Student
         $this->grades = array();
     }
 
+    /*
+     * Mutator method to add email to a student object
+     */
     function add_email($which, $address)
     {
         $this->emails[$which] = $address;
     }
 
+    /*
+     * Mutator method to add grades to a student object
+     */
     function add_grade($grade)
     {
         $this->grades[] = $grade;
     }
 
+    /*
+     * Calculate the average student grade from the $grades array
+     */
     function average()
     {
         $total = 0;
@@ -32,6 +44,9 @@ class Student
         return $total / count($this->grades);
     }
 
+    /*
+     * toString method for student record, returns student info with grade average
+     */
     function toString()
     {
         $result = $this->first_name . ' ' . $this->surname;

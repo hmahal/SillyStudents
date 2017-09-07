@@ -8,6 +8,9 @@ include('Student.php');
 
 $students = array();
 
+/*
+ * Setting up student records
+ */
 $first = new Student();
 $first->surname = "Doe";
 $first->first_name = "John";
@@ -39,8 +42,14 @@ $third->add_grade(99);
 $third->add_grade(99);
 $students['a007'] = $third;
 
+/*
+ * Sorting the student array by the key used to add them to the array.
+ */
 ksort($students);
 
+/*
+ * Printing out the sorted student records
+ */
 foreach ($students as $student)
     echo $student->toString();
 ?>
