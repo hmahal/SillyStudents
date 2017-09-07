@@ -51,6 +51,6 @@ ksort($students);
  * Printing out the sorted student records
  */
 foreach ($students as $student)
-    echo $student->toString();
+  echo $student->toString();
 ?>
 </body>
